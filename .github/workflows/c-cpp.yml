@@ -1,10 +1,14 @@
-name: C/C++ CI
+name: C1
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
+    paths:
+      - 'lab 1/**'
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
+    paths:
+      - 'lab 1/**'
 
 jobs:
   build:
@@ -13,10 +17,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: compiling and testing
-      run: |
-        for d in **/ ; do
-        cd "$d"
-        make
-        cd ..
-        done
+    - name: go to lab 1 and build
+      working-directory: ./lab 1
+      run: make 
