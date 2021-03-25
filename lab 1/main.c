@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <conio.h>
+
 
 int main(){
 
@@ -100,7 +100,6 @@ int main(){
         break; 
     }
     
-    getch();
     return 0;
 
 }
