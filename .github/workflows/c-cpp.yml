@@ -17,10 +17,10 @@ jobs:
       working-directory: ./lab 1
       run: make 
     - name: go to lab 2.1 and build
-      working-directory: ./lab 1/lab 2.1
+      working-directory: ./lab 2/lab 2.1
       run: make
     - name: go to lab 2.2
-      working-directory: ./lab 1/lab 2.2
+      working-directory: ./lab 2/lab 2.2
       run: make
       
       
