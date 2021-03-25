@@ -15,6 +15,6 @@ int res(int x, double e){
     do {
 		n++;
 		curr += pow(-1, n - 1) * (pow(x, 2 * n - 1) / fact(2 * n - 1));
-	} while (abs(sin(x) - curr) >= e);
+	} while (fabs(sin(x) - curr) >= e);
     return n;
 }
