@@ -6,5 +6,5 @@ buildMain:
 buildTest:
 	gcc -o test test.c src.c -std=c89 -lm
 
-runtest:
+runTest:
 	./test
