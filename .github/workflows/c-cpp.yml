@@ -3,12 +3,8 @@ name: C1
 on:
   push:
     branches: [ master ]
-    paths:
-      - 'lab 1/**'
   pull_request:
     branches: [ master ]
-    paths:
-      - 'lab 1/**'
 
 jobs:
   build:
