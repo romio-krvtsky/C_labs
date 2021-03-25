@@ -2,9 +2,9 @@ name: C1
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build:
@@ -16,3 +16,12 @@ jobs:
     - name: go to lab 1 and build
       working-directory: ./lab 1
       run: make 
+    - name: go to lab 2.1 and build
+      working-directory: ./lab 1/lab 2.1
+      run: make
+    - name: go to lab 2.2
+      working-directory: ./lab 1/lab 2.2
+      run: make
+      
+      
+      
