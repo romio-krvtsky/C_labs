@@ -81,9 +81,22 @@ void DeleteDuplicateRows(int** a, int n, int m)
 void ChangeElementsOrder(int** a, int n, int m)
 {
 	int** temp = (int**)malloc(n * sizeof(int*));
+	if(!temp) {
+		printf("memory error");
+		exit(1);
+	}
     int i,j,k;
-	for (i = 0; i < n; i++)
+	for (i = 0; i < n; i++) { 
 		temp[i] = (int*)malloc(1 * sizeof(int));
+		if(!temp[i]) {
+			printf("memory error");
+			for(i - 1; 0; i--) {
+				free(temp[i]);
+			}
+			free(temp);
+			return 0;
+		}
+	}
 
 	for (i = 0; i < n; i++)
 		temp[i][0] = 0;

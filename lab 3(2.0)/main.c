@@ -13,8 +13,21 @@ int main()
 	EnterAndCheckInput(&m);
     int i;
 	a = (int**)malloc(n * sizeof(int*));
-	for (i = 0; i < n; i++)
+	if(!a) {
+		printf("memory error");
+		return 0;
+	}
+	for (i = 0; i < n; i++) { 
 		a[i] = (int*)malloc(m * sizeof(int));
+		if(!a[i]) {
+			printf("memory error");
+			for(i - 1; 0; i--) {
+				free(a[i]);
+			}
+			free(a);
+			return 0;
+		}
+	}
 
 	printf("Fill the array with elements - numbers 0 or 1:\n");
 	FillArrayWithZerosAndOnes(a, n, m);
