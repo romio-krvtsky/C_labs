@@ -14,7 +14,6 @@ int main() {
 	std::cout << std::endl;
 	q1.Inversion();
 	q1.Print();
-	//q1.Inversion();
 	std::cout << std::endl;
 	std::cout << q1.First() << '\t' << q1.Last();
 
