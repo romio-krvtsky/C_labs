@@ -1,0 +1,22 @@
+name: LAB5
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'lab5/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'lab5/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: make
+      working-directory: ./lab5
+      run: make 
