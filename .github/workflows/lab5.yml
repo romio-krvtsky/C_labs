@@ -4,11 +4,11 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'lab5/**'
+      - 'lab 5/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'lab5/**'
+      - 'lab 5/**'
 
 jobs:
   build:
@@ -18,5 +18,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: make
-      working-directory: ./lab5
+      working-directory: ./lab 5
       run: make 
