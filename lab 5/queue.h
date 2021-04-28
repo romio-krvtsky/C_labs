@@ -53,7 +53,7 @@ public:
 
 	int First() {
 		if (Empty()) {
-			throw std::exception("queue is empty!");
+			std::cout << "queue is empty!";
 		}
 		else {
 			return arr[first];
@@ -62,7 +62,7 @@ public:
 
 	int Last() {
 		if (Empty()) {
-			throw std::exception("queue is empty!");		
+			std::cout << "queue is empty!";		
 		}
 		else {
 			return arr[last];
