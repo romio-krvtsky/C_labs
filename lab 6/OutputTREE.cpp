@@ -3,27 +3,24 @@
 
 int main()
 {
-    BST tr;
-
-    Node* root = new Node(49);
-    root->left = new Node(28);
-    root->right = new Node(83);
-
-    root->left->left = new Node(18);
-    root->left->right = new Node(40);
-    root->right->left = new Node(71);
-    root->right->right = new Node(97);
-
-    root->left->left->left = new Node(11);
-    root->left->left->right = new Node(19);
-    root->left->right->left = new Node(32);
-    root->left->right->right = new Node(44);
-    root->right->left->left = new Node(69);
-    root->right->left->right = new Node(72);
-    root->right->right->left = new Node(92);
-    root->right->right->right = new Node(99);
-
-    tr.OutputTree(root);
+    BST tr1;
+    Node* r = new Node(49);
+    tr1.root = r;
+    tr1.insert(49);
+    tr1.insert(28);
+    tr1.insert(83);
+    tr1.insert(18);
+    tr1.insert(40); 
+    tr1.insert(71);
+    tr1.insert(97);
+    tr1.insert(11);
+    tr1.insert(19);
+    tr1.insert(32);
+    tr1.insert(44);
+    tr1.insert(69);
+    tr1.insert(92);
+    tr1.insert(99);
+    tr1.OutputTree(r);
 
     return 0;
 }

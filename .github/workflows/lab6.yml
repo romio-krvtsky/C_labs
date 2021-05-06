@@ -1,0 +1,22 @@
+name: LAB6
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'lab 6/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'lab 6/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: make
+      working-directory: ./lab 6
+      run: make 

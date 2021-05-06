@@ -17,8 +17,30 @@ public:
     }
 };
 
+
+
 class BST {
+private:
+    void insert(Node*& n, int d)
+    {
+        if (d < n->data)
+        {
+            if (n->left)
+                insert(n->left, d);
+            else
+                n->left = new Node(d);
+        }
+        else if (d > n->data)
+        {
+            if (n->right)
+                insert(n->right, d);
+            else
+                n->right = new Node(d);
+        }
+    }
+
 public:
+    Node* root;
 
     void print2D(Node* root, int space)
     {
@@ -48,4 +70,12 @@ public:
         print2D(root, 0);
     }
 
+    void insert(int d)
+    {
+        if (root == NULL)
+            root = new Node(d);
+        else
+            insert(root, d);
+
+    }
 };
