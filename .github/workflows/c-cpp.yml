@@ -1,0 +1,26 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: configure
+      run: ./configure
+    - name: make
+      run: |
+        cd lab 7
+        make
+    - name: Upload
+      uses: codecov/codecov-action@v1
+      with:
+        files: |
+          ./lab 7/lab7_test.cpp.gcov
