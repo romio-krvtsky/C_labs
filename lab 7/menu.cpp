@@ -31,13 +31,15 @@ Book* get_book(ListBook* list, char* s)
 {
     Book* temp;
     for (temp = list->head; temp != NULL; temp = temp->next)
-        if (!strcmp(temp->name, s)) return temp;
+        return temp;
+        //if (!strcmp(temp->name, s)) return temp;
     return NULL;
 }
 void delete_book(ListBook* list, char* s)
 {
     Book* temp = NULL;
-    temp = get_book(list, s);
+    temp = list->head;
+    //temp = get_book(list, s);
     if (temp == NULL) exit(5);
     if (temp->prev) temp->prev->next = temp->next;
     if (temp->next) temp->next->prev = temp->prev;
@@ -104,8 +106,8 @@ void make_order(ListBook* lst)
         printf("Choose book to order: ");
         do {
             printf("Enter book`s name: ");
-            scanf("%s", string);
-            strcat(string, "\n");
+            //scanf("%s", string);
+            //strcat(string, "\n");
             temp = get_book(lst, string);
         } while (temp == NULL);
         printf("Enter count of chosen book to order: ");
