@@ -22,3 +22,5 @@ jobs:
       with:
         files: |
           ./lab 7/lab7_test.cpp.gcov
+          ./lab 7/lab7.cpp.gcov
+          ./lab 7/menu.cpp.gcov
